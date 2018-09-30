@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R_HQX0240_1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30ffa299-4e4c-49b4-ac22-8c37e544e3ad">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="webapa"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT r_hqx0240_1.sid,
+	r_hqx0240_1.page_no,
+	r_hqx0240_1.line_no,
+	r_hqx0240_1.list_hincd,
+	r_hqx0240_1.list_hinnma,
+	r_hqx0240_1.list_hiniszkb,
+	r_hqx0240_1.list_irosiz,
+	r_hqx0240_1.list_sizcd,
+	r_hqx0240_1.list_uritkdt01,
+	r_hqx0240_1.list_hinsg1,
+	r_hqx0240_1.list_znhinhg1,
+	r_hqx0240_1.list_zkhinhg1,
+	r_hqx0240_1.list_uritkdt02,
+	r_hqx0240_1.list_hinsg2,
+	r_hqx0240_1.list_znhinhg2,
+	r_hqx0240_1.list_zkhinhg2
+FROM r_hqx0240_1
+WHERE 
+	 r_hqx0240_1.sid = 's1' 
+ORDER BY r_hqx0240_1.sid ASC,
+	r_hqx0240_1.page_no ASC,
+	r_hqx0240_1.line_no ASC]]>
+	</queryString>
+	<field name="sid" class="java.lang.String"/>
+	<field name="page_no" class="java.lang.Integer"/>
+	<field name="line_no" class="java.lang.Integer"/>
+	<field name="list_hincd" class="java.lang.String"/>
+	<field name="list_hinnma" class="java.lang.String"/>
+	<field name="list_hiniszkb" class="java.lang.String"/>
+	<field name="list_irosiz" class="java.lang.String"/>
+	<field name="list_sizcd" class="java.lang.String"/>
+	<field name="list_uritkdt01" class="java.lang.String"/>
+	<field name="list_hinsg1" class="java.lang.String"/>
+	<field name="list_znhinhg1" class="java.lang.String"/>
+	<field name="list_zkhinhg1" class="java.lang.String"/>
+	<field name="list_uritkdt02" class="java.lang.String"/>
+	<field name="list_hinsg2" class="java.lang.String"/>
+	<field name="list_znhinhg2" class="java.lang.String"/>
+	<field name="list_zkhinhg2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="170" height="20" uuid="f718f76f-72a2-46b1-a3eb-f22178bff935">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="IPAexゴシック" size="16"/>
+				</textElement>
+				<text><![CDATA[商品色サイズ一覧表]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="720" y="0" width="40" height="10" uuid="879ad52c-861b-4e22-8e6e-390ffd83ea55">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="760" y="0" width="40" height="10" uuid="31ae0d64-f9c8-49c1-a594-4e2011cd3c8d">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["  /  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="yyyy-MM-dd">
+				<reportElement x="680" y="20" width="80" height="10" uuid="bf9a490f-8390-40f5-ba4d-900177a59644">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="HH:mm:ss">
+				<reportElement x="760" y="20" width="40" height="10" uuid="cc54663f-c39e-431d-9ae5-d1c5e8b5c648">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="5" width="80" height="10" uuid="7ba0e0d8-91cb-4477-9cc0-30dbc7b77fcf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[商品コード]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="5" width="150" height="10" uuid="1f898d2f-c2a4-4383-93b5-4aaceba0b27c"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[商品名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="5" width="40" height="10" uuid="fd6beafa-a163-40b7-8f34-51e0f6ebc288"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[色ｻ管理]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="5" width="30" height="10" uuid="3f99aae2-1c1b-46b3-a522-932f859de323"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[行番号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="5" width="30" height="10" uuid="09a120a1-c969-49e5-88fb-b6b0478d9b86"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[ｻｲｽﾞ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="5" width="60" height="10" uuid="d21e837d-d53a-4e63-be73-c63f4e6fc55e"/>
+				<textElement textAlignment="Center">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[① 適用日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="5" width="60" height="10" uuid="47aea878-fe80-422d-905e-64676ada9ba5"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[製造原価]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="5" width="60" height="10" uuid="d23f3aac-ad77-43ec-b91b-4bbf1f96cab9"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[税抜販売原価]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="5" width="60" height="10" uuid="4a25dfc1-4101-49e6-b709-9cc3566c3caf"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[税込販売原価]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="5" width="60" height="10" uuid="4ee9e26e-445e-43d8-8029-e6e0cf61c065"/>
+				<textElement textAlignment="Center">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[② 適用日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="5" width="60" height="10" uuid="c9c24ea3-2237-4ae2-9022-1f2cf4bcc1ae"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[製造原価]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="5" width="60" height="10" uuid="0c66e4a8-72df-485d-af0e-70baa4424830"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[税抜販売原価]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="5" width="60" height="10" uuid="39106ff1-e907-4979-bc9d-2ccbfb47ba57"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<text><![CDATA[税込販売原価]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="800" height="1" uuid="c1feca29-676f-443f-ae57-901ffe636b9d">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="20" width="800" height="1" uuid="16b49e7f-a849-4052-bf7f-a0a2e7ee0a59">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20" uuid="a670c2af-48fe-4959-9c28-0822b953a35e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_hincd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="160" height="20" uuid="f427d1a9-b4e8-4e0e-8603-7e35efa71f5c"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_hinnma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="20" height="20" uuid="5a75d6dc-3023-4d49-a33c-2df3e4984d60"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_hiniszkb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="30" height="20" uuid="f3cee897-79bb-466b-b5a0-7aa87001741e"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_irosiz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="30" height="20" uuid="cc84ec17-7d64-471d-ae1f-5a69f9cf6563"/>
+				<textElement>
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_sizcd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="60" height="20" uuid="0714fb37-cfec-4013-bdb0-0fb55778fe37"/>
+				<textElement textAlignment="Center">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_uritkdt01}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="60" height="20" uuid="0905a92e-a017-49b5-8a45-f1b2d5ff3e0c"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_hinsg1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="60" height="20" uuid="b54caa01-44c5-41c9-80ca-9fb42d13c104"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_znhinhg1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="60" height="20" uuid="b04dd903-9366-4707-8531-f567fe7a331c"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_zkhinhg1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="60" height="20" uuid="7305c502-d99e-4b1c-ab74-47c9336f703f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_uritkdt02}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="0" width="60" height="20" uuid="0b19fef8-5747-489b-915c-336a22eeadeb"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_hinsg2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="60" height="20" uuid="eb05c955-428e-4066-9e11-e895a558f382"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_znhinhg2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="740" y="0" width="60" height="20" uuid="74e48082-3b38-4545-9dd2-deac72017c05"/>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{list_zkhinhg2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
