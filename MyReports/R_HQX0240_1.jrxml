@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R_HQX0240_1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30ffa299-4e4c-49b4-ac22-8c37e544e3ad">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="webapa"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT r_hqx0240_1.sid,
+	r_hqx0240_1.page_no,
+	r_hqx0240_1.line_no,
+	r_hqx0240_1.list_hincd,
+	r_hqx0240_1.list_hinnma,
+	r_hqx0240_1.list_hiniszkb,
+	r_hqx0240_1.list_irosiz,
+	r_hqx0240_1.list_sizcd,
+	r_hqx0240_1.list_uritkdt01,
+	r_hqx0240_1.list_hinsg1,
+	r_hqx0240_1.list_znhinhg1,
+	r_hqx0240_1.list_zkhinhg1,
+	r_hqx0240_1.list_uritkdt02,
+	r_hqx0240_1.list_hinsg2,
+	r_hqx0240_1.list_znhinhg2,
+	r_hqx0240_1.list_zkhinhg2
+FROM r_hqx0240_1
+WHERE 
+	 r_hqx0240_1.sid = 's1' 
+ORDER BY r_hqx0240_1.sid ASC,
+	r_hqx0240_1.page_no ASC,
+	r_hqx0240_1.line_no ASC]]>
+	</queryString>
+	<field name="sid" class="java.lang.String"/>
+	<field name="page_no" class="java.lang.Integer"/>
+	<field name="line_no" class="java.lang.Integer"/>
+	<field name="list_hincd" class="java.lang.String"/>
+	<field name="list_hinnma" class="java.lang.String"/>
+	<field name="list_hiniszkb" class="java.lang.String"/>
+	<field name="list_irosiz" class="java.lang.String"/>
+	<field name="list_sizcd" class="java.lang.String"/>
+	<field name="list_uritkdt01" class="java.lang.String"/>
+	<field name="list_hinsg1" class="java.lang.String"/>
+	<field name="list_znhinhg1" class="java.lang.String"/>
+	<field name="list_zkhinhg1" class="java.lang.String"/>
+	<field name="list_uritkdt02" class="java.lang.String"/>
+	<field name="list_hinsg2" class="java.lang.String"/>
+	<field name="list_znhinhg2" class="java.lang.String"/>
+	<field name="list_zkhinhg2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="170" height="20" uuid="f718f76f-72a2-46b1-a3eb-f22178bff935">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="IPAexゴシック" size="16"/>
+				</textElement>
+				<text><![CDATA[商品色サイズ一覧表]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="720" y="0" width="40" height="10" uuid="879ad52c-861b-4e22-8e6e-390ffd83ea55">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="760" y="0" width="40" height="10" uuid="31ae0d64-f9c8-49c1-a594-4e2011cd3c8d">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["  /  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="yyyy-MM-dd">
+				<reportElement x="680" y="20" width="80" height="10" uuid="bf9a490f-8390-40f5-ba4d-900177a59644">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="HH:mm:ss">
+				<reportElement x="760" y="20" width="40" height="10" uuid="cc54663f-c39e-431d-9ae5-d1c5e8b5c648">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="IPAexゴシック" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+</jasperReport>
